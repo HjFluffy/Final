@@ -1,0 +1,51 @@
+ * {
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+ html {
+    background: url(Starwars\ Backdrop.jpg);
+
+ }
+
+ header {
+     display: flex;
+     justify-content: space-around;
+     margin: 1rem 0;
+     padding: 2em 0;
+     background-color: rgba(212, 209, 209, 0.5);
+ }
+ 
+ main {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+
+ figure {
+     margin: 16px;
+     background-color: #ffe81f;
+ }
+
+ figure img {
+     width: 200px;
+ }
+ figcaption {
+     text-align: center;
+     background-color: #ffe81f;
+ }
+ 
+ button {
+     width: 200px;
+     height: 40px;
+     border-radius: 16px;
+     border: none;
+     font-size: large;
+     background-color: #ffe81f;
+ }
+
+ button:hover {
+     background-color: #15f3fd;
+     color: white;
+     cursor: pointer;
+ }

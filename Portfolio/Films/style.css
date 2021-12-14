@@ -1,0 +1,96 @@
+
+
+html {
+  background: url(Starwars\ Backdrop.jpg);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+header {
+    position: fixed;
+    background: #ffe4c4;
+    width: 100%;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+  }
+  
+  header::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  nav {
+    float: right;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  .logo {
+    padding-bottom: 20px;
+  }
+  
+  nav a {
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  nav a:hover {
+    color: rgb(255, 255, 255);
+  }
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: #fff;
+  
+    position: absolute;
+    top: 0;
+    width: 0%;
+  
+    transition: all ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    width: 100%;
+  }
+
+  main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 240px;
+}
+
+
+img {
+    border: 10px solid #FFE81F;
+}
+
+figure {
+    background-color: #FFE81F;
+}
+
+figcaption {
+    text-align: center;
+    font-size: xx-large;
+    background-color: #FFE81F;
+    padding-bottom: .5rem;
+}
+

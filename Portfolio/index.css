@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(52, 154, 223);
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: white;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  background: #ffe4c4;
+  width: 100%;
+  font-weight: bold;
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.logo {
+  padding-bottom: 20px;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+}
+nav a:hover {
+  color: rgb(255, 255, 255);
+}
+nav a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #fff;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+/* This is the end of the header section. Body elements included */
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+  font-size: xx-large;
+}
+.welcome-section > p {
+  font-size: 2rem;
+  font-weight: 200;
+  padding-top: 1rem;
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+.learn {
+  display: flex;
+  flex-direction: row;
+  margin: 16px;
+}
+
+.learn img {
+  vertical-align: top;
+  display: flex;
+  justify-content: center;
+  width: 180px;
+  height: auto;
+}
+
+.learn > figure {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px;
+  padding-bottom: 24px;
+  margin: auto;
+}
+
+.aboutMe h3 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+
+.aboutMe figcaption {
+  display: flex;
+  justify-content: center;
+  border: 1px grey;
+  background-color: #222;
+  color: #fff;
+  padding: 3px;
+  text-align: center;
+}
+
+.vue {
+  height: 155px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+
+
+.projectsHeader {
+  display: flex;
+  justify-content: center;
+  background-color: #c5c5c5;
+  padding-top: 1rem;
+  color: black;
+}
+
+/* projects grid */
+
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2.5rem;
+  justify-content: space-evenly;
+  font-size: x-large;
+  background-color: #c5c5c5;
+  color: black;
+}
+
+.deathStar {
+  width: 128px;
+  height: auto;
+  padding-bottom: 1rem;
+  padding-right: 12px;
+}
+
+.pokeBall {
+  width: 148px;
+  height: auto;
+  padding-bottom: .18rem;
+  padding-right: 12px;
+}
+
+.swCharacters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stormTrooper {
+  width: 130px;
+  height: auto;
+  padding-bottom: 1rem;
+  justify-content: center;
+}
+
+figcaption.Tittle {
+  text-align: center;
+}
+/* end of projects grid */
+
+.code {
+  color: var(--main-gray);
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: #ff7f50;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+}
+
+.contact-section-header > h2 {
+  font-size: 6rem;
+}
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 4rem;
+  }
+}
+
+.contact-section-header > p {
+  font-style: italic;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 2rem;
+  text-shadow: 2px 2px 1px #8b8b8b;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(-4px);
+}
