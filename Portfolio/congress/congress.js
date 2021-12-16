@@ -8,6 +8,29 @@ const loyaltyHeading = document.querySelector('.mostLoyal')
 const seniorityHeading = document.querySelector('.seniority')
 
 
+/*const party = document.querySelector('.buttons')
+partyButton = document.createElement('button')
+partyButton.textContent = "Test me"
+
+partyButton.addEventlistener('click', () => populateSenatorDiv(short_title))
+
+party.appendChild(partyButton)
+
+const section = document.createElement('header')
+const senatorsButton = document.createElement('button')
+senatorsButton.textContent = 'Button'
+
+senatorsButton.addEventListener('click', () => populateSenatorDiv(title))
+section.appendChild(senatorsButton)
+
+
+
+
+//senatorsButton.addEventListener('click', () => populateSenatorDiv(party))
+//representativeButton.addEventListener('click', () => populateSenatorDiv(title)) 
+
+I could not get the buttons to work at all.... :,(*/
+
 function SimplifiedMembers(chamberFilter) {
   const filteredArray = members.filter(member => chamberFilter ? member.short_title === chamberFilter : members)
 
@@ -40,10 +63,6 @@ function populateSenatorDiv(simpleSenators) {
     senatorDiv.appendChild(senFigure)
   })
 }
-
-//const filterSenators = (prop, value) => SimplifiedSenators().filter(senator => senator[prop] === value)
-
-//console.log(filterSenators('gender', 'F'))
 
 const mostSeniorMember = SimplifiedMembers().reduce((acc, senator) => acc.seniority > senator.seniority ? acc : senator)
 
