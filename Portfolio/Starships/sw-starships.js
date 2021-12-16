@@ -9,6 +9,7 @@ const modal = document.querySelector('.modal')
 const closeButton = document.querySelector('.modal-close')
 const modalBackground = document.querySelector('.modal-background')
 
+
 const missingMessage = document.querySelector('.missingMessage')
 
 closeButton.addEventListener('click', () =>  modal.classList.toggle('is-active'))

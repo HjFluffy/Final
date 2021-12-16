@@ -18,8 +18,14 @@ header h1 {
     color: #ffe81f;
 }
 
+a {
+    color: #ffe81f;
+   
+}
+
 nav {
     margin-left: 2em;
+    color: white;
 }
 
 #main {
@@ -41,4 +47,15 @@ img {
     background-color: #ffe81f;
     text-align: center;
     font-size: xx-large;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+
+footer img {
+    border: none;
 }
