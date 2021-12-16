@@ -13,10 +13,16 @@ header {
     padding: 24px;
 }
 
-header h1 {
+header h1, h2 {
     background-color: black;
     border-radius: 24px;
     width: 25rem;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .senators {
