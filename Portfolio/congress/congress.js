@@ -2,19 +2,19 @@ import { senators } from "../Data/senators.js";
 
 const senatorDiv = document.querySelector('.senators')
 
-function SimplifiedSenators(senatorArray) {
-    return senatorArray.map(senator => {
-        let middleName = senator.middle_name ? ` ${senator.middleName} ` : ` `
-        return{
-            id: senator.id,
-            name: `${senator.first_name}${middleName}${senator.last_name}`,
-            party: senator.party,
-            imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-100px.jpeg`
+function SimplifiedSenators() {
+    return senators.map(senator => {
+    let middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
+    return {
+      id: senator.id,
+      name: `${senator.first_name}${middleName}${senator.last_name}`,
+      party: senator.party,
+      gender: senator.gender,
+      seniority: +senator.seniority, 
+      imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-100px.jpeg`
         }
     })
 }
-
-populateSenatorDiv(SimplifiedSenators(senators))
 
 function populateSenatorDiv(simpleSenators){
     simpleSenators.forEach(senator => {
@@ -29,5 +29,13 @@ function populateSenatorDiv(simpleSenators){
         senFigure.appendChild(figCaption)
         senatorDiv.appendChild(senFigure)
     })
-
 }
+
+const filterSenators = (prop, value) => SimplifiedSenators().filter(senator => senators[prop] === value)
+
+//console.log(filterSenators('gender', 'F'))
+
+const mostSeniorSenator = SimplifiedSenators().reduce((acc, senator) => acc.seniority > senator.seniority ? acc : senator
+)
+
+populateSenatorDiv(SimplifiedSenators())
