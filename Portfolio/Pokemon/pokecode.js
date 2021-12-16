@@ -36,7 +36,7 @@ function getAPIData(url) {
       let pokeName = prompt('Name your new Pokemon!')
       let pokeHeight = prompt ('How tall is your Pokemon?')
       let pokeAbilities = prompt('What are your Pokemon abilites? (use a comma seperated list.')
-      let newPokemon = new Pokemon(pokeName, pokeHeight, 3785, getAbilitiesArray (pokeAbilities))
+      let newPokemon = new pokemon(pokeName, pokeHeight, 3785, getAbilitiesArray (pokeAbilities))
       populatePokeCard(newPokemon)
   })
 
