@@ -198,6 +198,19 @@ nav a:hover::before {
   justify-content: center;
 }
 
+.hutt {
+  width: 130px;
+  justify-content: center;
+}
+
+.jabba {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
 figcaption.Tittle {
   text-align: center;
 }

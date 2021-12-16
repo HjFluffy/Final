@@ -1,8 +1,18 @@
 import { starships } from "../Data/starships.js";
+import { getLastNumber, removeChildren } from "../utils/index.js";
 
 const nav = document.querySelector('.nav')
 const navList = document.querySelector('.navList')
 const shipView = document.querySelector('.displaySection')
+
+const modal = document.querySelector('.modal')
+const closeButton = document.querySelector('.modal-close')
+const modalBackground = document.querySelector('.modal-background')
+
+const missingMessage = document.querySelector('.missingMessage')
+
+closeButton.addEventListener('click', () =>  modal.classList.toggle('is-active'))
+modalBackground.addEventListener('click', () => modal.classList.toggle('is-active'))
 
 function populateView(starships) {
     starships.forEach(starship => {
@@ -24,7 +34,14 @@ function populateView(starships) {
 populateView(starships)
 
 function populateShipView(shipData) {
+    removeChildren(shipView)
     let shipImage = document.createElement('img')
-    shipImage.src = `https://starwars-visualguide.com/assets/img/starships/15.jpg`
+    let shipNum = getLastNumber(shipData.url)
+    shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
+    shipImage.addEventListener('error', () => {
+        shipImage.hidden = true
+        modal.classList.toggle('is-active')
+        missingMessage.textContent = `BwoHoHo ${shipData.name} is sold`
+    })
     shipView.appendChild(shipImage)
 }
